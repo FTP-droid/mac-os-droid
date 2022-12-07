@@ -1,7 +1,30 @@
 .main {
-  background-color: gray;
+  background-color: rgba(199, 199, 199, 0.75);
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 1.5rem;
+  align-items: center;
+  height: 1.25rem;
+  font-size: 0.85rem;
+}
+
+.left {
+  display: flex;
+  gap: 2rem;
+  margin-left: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.apple {
+  width: 0.85rem;
+  height: 0.85rem;
 }
