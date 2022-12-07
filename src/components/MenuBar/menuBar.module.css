@@ -1,0 +1,7 @@
+.main {
+  background-color: gray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 1.5rem;
+}

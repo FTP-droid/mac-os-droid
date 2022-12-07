@@ -1,7 +1,6 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
 import './App.css';
+import MenuBar from '../components/MenuBar/MenuBar';
 
 export default function App() {
-  return <div>Hello</div>;
+  return <MenuBar />;
 }
