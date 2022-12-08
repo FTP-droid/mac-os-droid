@@ -2,9 +2,12 @@ import { useState } from 'react';
 import styles from './menuBar.module.css';
 import appleIcon from '../../../assets/apple.svg';
 import appleIconWhite from '../../../assets/appleW.png';
-import battery from '../../../assets/battery.svg';
-import wifi from '../../../assets/wifi.svg';
-import search from '../../../assets/search.svg';
+import batteryIcon from '../../../assets/battery.svg';
+import batteryIconWhite from '../../../assets/batteryW.svg';
+import wifiIcon from '../../../assets/wifi.svg';
+import wifiIconWhite from '../../../assets/wifiW.svg';
+import searchIcon from '../../../assets/search.svg';
+import searchIconWhite from '../../../assets/searchW.svg';
 
 const DAYLIST = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -16,27 +19,30 @@ function MenuBar() {
   const minutes =
     date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
 
-  const [icon, setIcon] = useState(appleIcon);
+  const [apple, setApple] = useState(appleIcon);
+  const [battery, setBattery] = useState(batteryIcon);
+  const [wifi, setWifi] = useState(wifiIcon);
+  const [search, setSearch] = useState(searchIcon);
 
   return (
     <div className={styles.main}>
       <section className={styles.left}>
         <div
           className={styles['apple-container']}
-          onMouseOver={(e) => {
-            setIcon(appleIconWhite);
+          onMouseOver={() => {
+            setApple(appleIconWhite);
           }}
-          onFocus={(e) => {
-            setIcon(appleIconWhite);
+          onFocus={() => {
+            setApple(appleIconWhite);
           }}
-          onMouseOut={(e) => {
-            setIcon(appleIcon);
+          onMouseOut={() => {
+            setApple(appleIcon);
           }}
-          onBlur={(e) => {
-            setIcon(appleIcon);
+          onBlur={() => {
+            setApple(appleIcon);
           }}
         >
-          <img src={icon} alt="apple" className={styles.apple} />
+          <img src={apple} alt="apple" className={styles.apple} />
         </div>
 
         <button type="button" className={styles['left-child']}>
@@ -59,14 +65,66 @@ function MenuBar() {
         </button>
       </section>
       <section className={styles.right}>
-        <div className={styles['right-icon-container']}>
-          <img src={battery} alt="" className={styles['right-child']} />
+        <div
+          className={styles['right-icon-container']}
+          onMouseOver={() => {
+            setBattery(batteryIconWhite);
+          }}
+          onFocus={() => {
+            setBattery(batteryIconWhite);
+          }}
+          onMouseOut={() => {
+            setBattery(batteryIcon);
+          }}
+          onBlur={() => {
+            setBattery(batteryIcon);
+          }}
+        >
+          <img
+            src={battery}
+            alt=""
+            className={styles['right-child']}
+            id={styles.battery}
+          />
         </div>
-        <div className={styles['right-icon-container']}>
+        <div
+          className={styles['right-icon-container']}
+          onMouseOver={() => {
+            setWifi(wifiIconWhite);
+          }}
+          onFocus={() => {
+            setWifi(wifiIconWhite);
+          }}
+          onMouseOut={() => {
+            setWifi(wifiIcon);
+          }}
+          onBlur={() => {
+            setWifi(wifiIcon);
+          }}
+        >
           <img src={wifi} alt="" className={styles['right-child']} />
         </div>
-        <div className={styles['right-icon-container']}>
-          <img src={search} alt="" className={styles['right-child']} />
+        <div
+          className={styles['right-icon-container']}
+          onMouseOver={() => {
+            setSearch(searchIconWhite);
+          }}
+          onFocus={() => {
+            setSearch(searchIconWhite);
+          }}
+          onMouseOut={() => {
+            setSearch(searchIcon);
+          }}
+          onBlur={() => {
+            setSearch(searchIcon);
+          }}
+        >
+          <img
+            src={search}
+            alt=""
+            className={styles['right-child']}
+            id={styles.search}
+          />
         </div>
         <button type="button" className={styles['date-btn']}>{`${
           DAYLIST[day]
