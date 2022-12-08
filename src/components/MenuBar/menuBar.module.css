@@ -10,21 +10,78 @@
 
 .left {
   display: flex;
-  gap: 2rem;
   margin-left: 1rem;
   justify-content: center;
   align-items: center;
+  height: 100%;
+}
+
+.left-child {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1rem;
+  border: 0;
+  background-color: rgba(199, 199, 199, 0.1);
+}
+
+.left-child:hover {
+  background-color: #1f1fff;
+  color: white;
 }
 
 .right {
   display: flex;
-  gap: 1rem;
   margin-right: 1rem;
   justify-content: center;
   align-items: center;
 }
 
+.right-icon-container {
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.25rem;
+}
+
+.right-child:hover {
+  color: white;
+}
+
+.right-icon-container:hover {
+  background-color: #1f1fff;
+}
+
 .apple {
-  width: 0.85rem;
-  height: 0.85rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0.125rem 0.125rem;
+  background-color: rgba(199, 199, 199, 0.1);
+}
+
+.apple-container {
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apple-container:hover .apple {
+  background-color: #1f1fff;
+  width: 1.5rem;
+  padding: 0.125rem 0.35rem;
+}
+
+.date-btn {
+  border: 0;
+  height: 1.25rem;
+  background-color: rgba(199, 199, 199, 0.1);
+}
+
+.date-btn:hover {
+  color: white;
+  background-color: blue;
 }
