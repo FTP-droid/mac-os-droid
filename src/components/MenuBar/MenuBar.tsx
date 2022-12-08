@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MenuBarIcon from 'components/MenuBarIcon/MenuBarIcon';
 import styles from './menuBar.module.css';
 import appleIcon from '../../../assets/apple.svg';
 import appleIconWhite from '../../../assets/appleW.png';
@@ -19,32 +20,16 @@ function MenuBar() {
   const minutes =
     date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
 
-  const [apple, setApple] = useState(appleIcon);
-  const [battery, setBattery] = useState(batteryIcon);
-  const [wifi, setWifi] = useState(wifiIcon);
-  const [search, setSearch] = useState(searchIcon);
-
   return (
     <div className={styles.main}>
       <section className={styles.left}>
-        <div
-          className={styles['apple-container']}
-          onMouseOver={() => {
-            setApple(appleIconWhite);
-          }}
-          onFocus={() => {
-            setApple(appleIconWhite);
-          }}
-          onMouseOut={() => {
-            setApple(appleIcon);
-          }}
-          onBlur={() => {
-            setApple(appleIcon);
-          }}
-        >
-          <img src={apple} alt="apple" className={styles.apple} />
-        </div>
-
+        <MenuBarIcon
+          containerClass="apple-container"
+          icon={appleIcon}
+          iconWhite={appleIconWhite}
+          imgClass="apple"
+          imgId=""
+        />
         <button type="button" className={styles['left-child']}>
           File
         </button>
@@ -65,67 +50,27 @@ function MenuBar() {
         </button>
       </section>
       <section className={styles.right}>
-        <div
-          className={styles['right-icon-container']}
-          onMouseOver={() => {
-            setBattery(batteryIconWhite);
-          }}
-          onFocus={() => {
-            setBattery(batteryIconWhite);
-          }}
-          onMouseOut={() => {
-            setBattery(batteryIcon);
-          }}
-          onBlur={() => {
-            setBattery(batteryIcon);
-          }}
-        >
-          <img
-            src={battery}
-            alt=""
-            className={styles['right-child']}
-            id={styles.battery}
-          />
-        </div>
-        <div
-          className={styles['right-icon-container']}
-          onMouseOver={() => {
-            setWifi(wifiIconWhite);
-          }}
-          onFocus={() => {
-            setWifi(wifiIconWhite);
-          }}
-          onMouseOut={() => {
-            setWifi(wifiIcon);
-          }}
-          onBlur={() => {
-            setWifi(wifiIcon);
-          }}
-        >
-          <img src={wifi} alt="" className={styles['right-child']} />
-        </div>
-        <div
-          className={styles['right-icon-container']}
-          onMouseOver={() => {
-            setSearch(searchIconWhite);
-          }}
-          onFocus={() => {
-            setSearch(searchIconWhite);
-          }}
-          onMouseOut={() => {
-            setSearch(searchIcon);
-          }}
-          onBlur={() => {
-            setSearch(searchIcon);
-          }}
-        >
-          <img
-            src={search}
-            alt=""
-            className={styles['right-child']}
-            id={styles.search}
-          />
-        </div>
+        <MenuBarIcon
+          containerClass="right-icon-container"
+          icon={batteryIcon}
+          iconWhite={batteryIconWhite}
+          imgClass="right-child"
+          imgId="battery"
+        />
+        <MenuBarIcon
+          containerClass="right-icon-container"
+          icon={wifiIcon}
+          iconWhite={wifiIconWhite}
+          imgClass="right-child"
+          imgId=""
+        />
+        <MenuBarIcon
+          containerClass="right-icon-container"
+          icon={searchIcon}
+          iconWhite={searchIconWhite}
+          imgClass="right-child"
+          imgId="search"
+        />
         <button type="button" className={styles['date-btn']}>{`${
           DAYLIST[day]
         } ${hours % 12}:${minutes} ${hours > 12 ? 'PM' : 'AM'}`}</button>

@@ -1,0 +1,44 @@
+.apple {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0.125rem 0.125rem;
+  background-color: rgba(199, 199, 199, 0.1);
+}
+
+.apple-container {
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apple-container:hover .apple {
+  background-color: #1f1fff;
+  width: 1.5rem;
+  padding: 0.125rem 0.35rem;
+}
+
+.right-icon-container {
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.25rem;
+}
+
+.right-icon-container:hover {
+  background-color: #1f1fff;
+}
+
+.right-child {
+  width: 1.1rem;
+  object-fit: contain;
+}
+
+#battery {
+  width: 1.25rem;
+}
+
+#search {
+  width: 1rem;
+}
