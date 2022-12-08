@@ -19,6 +19,8 @@ function MenuBar() {
     date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
   const dayList = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
+  const leftIcons = ['File', 'Edit', 'View', 'Go', 'Window', 'Help'];
+
   const rightIcons = [
     {
       id: 'battery',
@@ -37,8 +39,6 @@ function MenuBar() {
     },
   ];
 
-  const leftIcons = ['File', 'Edit', 'View', 'Go', 'Window', 'Help'];
-
   return (
     <div className={styles.main}>
       <section className={styles.left}>
@@ -50,7 +50,7 @@ function MenuBar() {
           imgId=""
         />
         {leftIcons.map((i) => (
-          <button type="button" className={styles['left-child']}>
+          <button type="button" className={styles['left-child']} key={i}>
             {i}
           </button>
         ))}
@@ -63,6 +63,7 @@ function MenuBar() {
             iconWhite={i.iconWhite}
             imgClass="right-child"
             imgId={i.id}
+            key={i.icon}
           />
         ))}
         <button type="button" className={styles['date-btn']}>{`${
