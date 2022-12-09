@@ -182,7 +182,6 @@ function MenuBar() {
         {leftIcons.map((v, i) => (
           <MenuBarText text={v} dropDownValues={all[i]} />
         ))}
-        <MenuBarText text="File" dropDownValues={fileDropDownValues} />
       </section>
       <section className={styles.right}>
         {rightIcons.map((i) => (
