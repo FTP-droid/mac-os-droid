@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .apple-container:hover .apple {
@@ -18,12 +19,55 @@
   padding: 0.125rem 0.35rem;
 }
 
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ececec;
+  width: 10rem;
+  top: 1.25rem;
+  left: 0.25rem;
+  z-index: 1;
+  margin-left: auto;
+  border-radius: 2px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+.apple-container:hover .dropdown {
+  display: flex;
+}
+
+.dropdown-btn {
+  background-color: #e7e7e7;
+  border: 0;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dropdown-btn:hover {
+  background-color: #1f1fff;
+  color: white;
+}
+
+.dropdown-btn:first-child {
+  margin-top: 0.25rem;
+}
+
+.dropdown-btn:last-child {
+  padding-bottom: 0.25rem;
+}
+
 .right-icon-container {
   width: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 1.25rem;
+  position: relative;
 }
 
 .right-icon-container:hover {
@@ -33,6 +77,15 @@
 .right-child {
   width: 1.1rem;
   object-fit: contain;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #d6d6d6;
+  height: 1px;
 }
 
 #battery {
