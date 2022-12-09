@@ -16,22 +16,6 @@
   height: 100%;
 }
 
-.left-child {
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 0 1rem;
-  border: 0;
-  background-color: rgba(199, 199, 199, 0.1);
-}
-
-.left-child:hover {
-  background-color: #1f1fff;
-  color: white;
-}
-
 .right {
   display: flex;
   margin-right: 1rem;

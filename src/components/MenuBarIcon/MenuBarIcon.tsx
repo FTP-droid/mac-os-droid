@@ -7,15 +7,16 @@ function MenuBarIcon({
   iconWhite,
   imgClass,
   imgId,
+  dropDownValues,
 }: {
   containerClass: string;
   icon: string;
   iconWhite: string;
   imgClass: string;
   imgId: string;
+  dropDownValues: Array<string>;
 }) {
   const [currentIcon, setCurrentIcon] = useState(icon);
-
   return (
     <div
       className={styles[containerClass]}
@@ -39,44 +40,15 @@ function MenuBarIcon({
         id={styles[imgId]}
       />
       <div className={styles.dropdown}>
-        <button type="button" className={styles['dropdown-btn']}>
-          About this Mac
-        </button>
-        <hr />
-        <button type="button" className={styles['dropdown-btn']}>
-          System Preferences
-        </button>
-        <button type="button" className={styles['dropdown-btn']}>
-          Location
-        </button>
-        <button type="button" className={styles['dropdown-btn']}>
-          App Store
-        </button>
-        <hr />
-        <button type="button" className={styles['dropdown-btn']}>
-          Recent Items
-        </button>
-        <hr />
-        <button type="button" className={styles['dropdown-btn']}>
-          Force Quit...
-        </button>
-        <hr />
-        <button type="button" className={styles['dropdown-btn']}>
-          Sleep
-        </button>
-        <button type="button" className={styles['dropdown-btn']}>
-          Restart...
-        </button>
-        <button type="button" className={styles['dropdown-btn']}>
-          Shut Down...
-        </button>
-        <hr />
-        <button type="button" className={styles['dropdown-btn']}>
-          Lock Screen
-        </button>
-        <button type="button" className={styles['dropdown-btn']}>
-          Log Out
-        </button>
+        {dropDownValues.map((v) =>
+          v.length === 1 ? (
+            <hr key={v} />
+          ) : (
+            <button type="button" className={styles['dropdown-btn']} key={v}>
+              {v}
+            </button>
+          )
+        )}
       </div>
     </div>
   );
