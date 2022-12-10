@@ -1,22 +1,3 @@
-const appleDropDownValues = [
-  'About this Mac',
-  '1',
-  'System Preferences',
-  'Location',
-  'App Store',
-  '2',
-  'Recent Items',
-  '3',
-  'Force Quit...',
-  '4',
-  'Sleep',
-  'Restart...',
-  'Shut Down...',
-  '5',
-  'Lock Screen',
-  'Log Out',
-];
-
 const fileDropDownValues = [
   'New Finder Window',
   'New Folder',
