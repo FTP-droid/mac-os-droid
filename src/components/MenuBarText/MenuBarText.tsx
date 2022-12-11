@@ -7,12 +7,15 @@ function MenuBarText({
   text: string;
   dropDownValues: Array<string>;
 }) {
+  const style = text.includes(':')
+    ? `${styles.dropdown} ${styles.right}`
+    : styles.dropdown;
   return (
     <div className={styles.container}>
       <button type="button" className={styles.text}>
-        {text}
+        {text === 'Finder' ? <b>{text}</b> : <span>{text}</span>}
       </button>
-      <div className={styles.dropdown}>
+      <div className={style}>
         {dropDownValues.map((v) =>
           v.length === 1 ? (
             <hr key={v} />

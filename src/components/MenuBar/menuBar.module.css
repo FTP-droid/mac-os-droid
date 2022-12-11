@@ -22,14 +22,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.date-btn {
-  border: 0;
-  height: 1.25rem;
-  background-color: rgba(199, 199, 199, 0.1);
-}
-
-.date-btn:hover {
-  color: white;
-  background-color: blue;
-}

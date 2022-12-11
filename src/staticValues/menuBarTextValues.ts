@@ -1,3 +1,17 @@
+const finderDropDownValues = [
+  'About Finder',
+  's',
+  'Preferences...',
+  't',
+  'Empty Trash...',
+  'u',
+  'Services',
+  'v',
+  'Hide Finder',
+  'Hide Others',
+  'Show All',
+];
+
 const fileDropDownValues = [
   'New Finder Window',
   'New Folder',
@@ -98,15 +112,24 @@ const helpDropDownValues = [
   'New to Mac? Tour the Basics',
 ];
 
+const dateDropDownValues = [
+  'View as Analog',
+  'View as Digital',
+  'r',
+  'Open Date & Time Preferences...',
+];
+
 const all = [
+  finderDropDownValues,
   fileDropDownValues,
   editDropDownValues,
   viewDropDownValues,
   goDropDownValues,
   windowDropDownValues,
   helpDropDownValues,
+  dateDropDownValues,
 ];
 
-const textValues = ['File', 'Edit', 'View', 'Go', 'Window', 'Help'];
+const textValues = ['Finder', 'File', 'Edit', 'View', 'Go', 'Window', 'Help'];
 
 export { all, textValues };

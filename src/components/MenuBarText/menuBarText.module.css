@@ -67,3 +67,7 @@ hr {
 .container:hover .dropdown {
   display: flex;
 }
+
+.right {
+  left: -7.25rem;
+}

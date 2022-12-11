@@ -70,9 +70,12 @@ function MenuBar() {
             dropDownValues={allIconDropDownValues[i]}
           />
         ))}
-        <button type="button" className={styles['date-btn']}>{`${
-          dayList[day]
-        } ${hours % 12}:${minutes} ${hours > 12 ? 'PM' : 'AM'}`}</button>
+        <MenuBarText
+          text={`${dayList[day]} ${hours % 12}:${minutes} ${
+            hours > 12 ? 'PM' : 'AM'
+          }`}
+          dropDownValues={all[all.length - 1]}
+        />
       </section>
     </div>
   );
