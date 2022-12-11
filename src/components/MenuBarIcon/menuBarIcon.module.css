@@ -66,6 +66,10 @@
   position: relative;
 }
 
+.right-icon-container:hover .dropdown {
+  display: flex;
+}
+
 .right-icon-container:hover {
   background-color: #1f1fff;
 }
@@ -75,6 +79,11 @@
   object-fit: contain;
 }
 
+.right {
+  left: -13rem;
+  width: 15rem;
+}
+
 hr {
   border: 0;
   clear: both;
@@ -82,6 +91,35 @@ hr {
   width: 100%;
   background-color: #d6d6d6;
   height: 1px;
+}
+
+.search-container {
+  position: absolute;
+  top: 1.25rem;
+  width: 15rem;
+  height: 2rem;
+  background-color: #ececec;
+  left: -13rem;
+  border-radius: 4px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-icon-container:hover .search-container {
+  display: flex;
+}
+
+input {
+  border: 0;
+  width: 14.5rem;
+  height: 1.65rem;
+  border-radius: 3px;
+  font-size: 1.5rem;
+}
+
+input:focus {
+  outline: none;
 }
 
 #battery {

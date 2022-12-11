@@ -41,17 +41,6 @@ const batteryDropDownValues = [
   'Open Energy Saver Preferences...',
 ];
 
-const dateDropDownValues = [
-  'View as Analog',
-  'View as Digital',
-  'r',
-  'Open Date & Time Preferences...',
-];
-
-const allIconDropDownValues = [
-  wifiDropDownValues,
-  batteryDropDownValues,
-  dateDropDownValues,
-];
+const allIconDropDownValues = [batteryDropDownValues, wifiDropDownValues];
 
 export { appleDropDownValues, allIconDropDownValues };

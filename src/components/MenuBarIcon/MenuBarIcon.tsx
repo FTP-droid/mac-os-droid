@@ -17,6 +17,11 @@ function MenuBarIcon({
   dropDownValues: Array<string>;
 }) {
   const [currentIcon, setCurrentIcon] = useState(icon);
+  const dropdownStyle =
+    containerClass === 'right-icon-container'
+      ? `${styles.dropdown} ${styles.right}`
+      : styles.dropdown;
+
   return (
     <div
       className={styles[containerClass]}
@@ -39,17 +44,23 @@ function MenuBarIcon({
         className={styles[imgClass]}
         id={styles[imgId]}
       />
-      <div className={styles.dropdown}>
-        {dropDownValues.map((v) =>
-          v.length === 1 ? (
-            <hr key={v} />
-          ) : (
-            <button type="button" className={styles['dropdown-btn']} key={v}>
-              {v}
-            </button>
-          )
-        )}
-      </div>
+      {!(imgId === 'search') ? (
+        <div className={dropdownStyle}>
+          {dropDownValues.map((v) =>
+            v.length === 1 ? (
+              <hr key={v} />
+            ) : (
+              <button type="button" className={styles['dropdown-btn']} key={v}>
+                {v}
+              </button>
+            )
+          )}
+        </div>
+      ) : (
+        <div className={styles['search-container']}>
+          <input type="text" placeholder="Search" />
+        </div>
+      )}
     </div>
   );
 }

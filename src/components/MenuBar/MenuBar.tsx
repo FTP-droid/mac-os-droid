@@ -59,15 +59,15 @@ function MenuBar() {
         ))}
       </section>
       <section className={styles.right}>
-        {rightIcons.map((i, index) => (
+        {rightIcons.map((v, i) => (
           <MenuBarIcon
             containerClass="right-icon-container"
-            icon={i.icon}
-            iconWhite={i.iconWhite}
+            icon={v.icon}
+            iconWhite={v.iconWhite}
             imgClass="right-child"
-            imgId={i.id}
-            key={i.icon}
-            dropDownValues={allIconDropDownValues[index]}
+            imgId={v.id}
+            key={v.icon}
+            dropDownValues={allIconDropDownValues[i]}
           />
         ))}
         <button type="button" className={styles['date-btn']}>{`${
