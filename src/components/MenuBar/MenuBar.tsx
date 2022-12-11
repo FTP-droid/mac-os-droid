@@ -11,6 +11,10 @@ import wifiIconWhite from '../../../assets/wifiW.svg';
 import searchIcon from '../../../assets/search.svg';
 import searchIconWhite from '../../../assets/searchW.svg';
 import { all, textValues } from '../../staticValues/menuBarTextValues';
+import {
+  appleDropDownValues,
+  allIconDropDownValues,
+} from '../../staticValues/menuBarIconValues';
 
 function MenuBar() {
   const [date, setDate] = useState(new Date());
@@ -39,25 +43,6 @@ function MenuBar() {
     },
   ];
 
-  const appleDropDownValues = [
-    'About this Mac',
-    '1',
-    'System Preferences',
-    'Location',
-    'App Store',
-    '2',
-    'Recent Items',
-    '3',
-    'Force Quit...',
-    '4',
-    'Sleep',
-    'Restart...',
-    'Shut Down...',
-    '5',
-    'Lock Screen',
-    'Log Out',
-  ];
-
   return (
     <div className={styles.main}>
       <section className={styles.left}>
@@ -70,11 +55,11 @@ function MenuBar() {
           dropDownValues={appleDropDownValues}
         />
         {textValues.map((v, i) => (
-          <MenuBarText text={v} dropDownValues={all[i]} />
+          <MenuBarText text={v} dropDownValues={all[i]} key={v} />
         ))}
       </section>
       <section className={styles.right}>
-        {rightIcons.map((i) => (
+        {rightIcons.map((i, index) => (
           <MenuBarIcon
             containerClass="right-icon-container"
             icon={i.icon}
@@ -82,7 +67,7 @@ function MenuBar() {
             imgClass="right-child"
             imgId={i.id}
             key={i.icon}
-            dropDownValues={[]}
+            dropDownValues={allIconDropDownValues[index]}
           />
         ))}
         <button type="button" className={styles['date-btn']}>{`${
