@@ -58,7 +58,16 @@ function MenuBarIcon({
         </div>
       ) : (
         <div className={styles['search-container']}>
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            placeholder="Search"
+            onMouseOut={(e) => {
+              (e.target as HTMLInputElement).value = '';
+            }}
+            onBlur={(e) => {
+              (e.target as HTMLInputElement).value = '';
+            }}
+          />
         </div>
       )}
     </div>

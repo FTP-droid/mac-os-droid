@@ -2,14 +2,14 @@ import { useState } from 'react';
 import MenuBarIcon from 'components/MenuBarIcon/MenuBarIcon';
 import MenuBarText from 'components/MenuBarText/MenuBarText';
 import styles from './menuBar.module.css';
-import appleIcon from '../../../assets/apple.svg';
-import appleIconWhite from '../../../assets/appleW.png';
-import batteryIcon from '../../../assets/battery.svg';
-import batteryIconWhite from '../../../assets/batteryW.svg';
-import wifiIcon from '../../../assets/wifi.svg';
-import wifiIconWhite from '../../../assets/wifiW.svg';
-import searchIcon from '../../../assets/search.svg';
-import searchIconWhite from '../../../assets/searchW.svg';
+import appleIcon from '../../../assets/MenuBarIcons/apple.svg';
+import appleIconWhite from '../../../assets/MenuBarIcons/appleW.png';
+import batteryIcon from '../../../assets/MenuBarIcons/battery.svg';
+import batteryIconWhite from '../../../assets/MenuBarIcons/batteryW.svg';
+import wifiIcon from '../../../assets/MenuBarIcons/wifi.svg';
+import wifiIconWhite from '../../../assets/MenuBarIcons/wifiW.svg';
+import searchIcon from '../../../assets/MenuBarIcons/search.svg';
+import searchIconWhite from '../../../assets/MenuBarIcons/searchW.svg';
 import { all, textValues } from '../../staticValues/menuBarTextValues';
 import {
   appleDropDownValues,
