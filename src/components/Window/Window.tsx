@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import styles from './window.module.css';
 
 function Window() {
@@ -6,10 +7,10 @@ function Window() {
       <div className={styles.header}>
         <div className={styles['button-container']}>
           <button type="button" className={styles.button} id={styles.close}>
-            x
+            <span className={styles['button-child']}>x</span>
           </button>
           <button type="button" className={styles.button} id={styles.minimize}>
-            -
+            <span className={styles['button-child']}>-</span>
           </button>
         </div>
       </div>
