@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './window.module.css';
 
 function Window() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} draggable="true">
       <div className={styles.header}>
         <div className={styles['button-container']}>
           <button type="button" className={styles.button} id={styles.close}>
