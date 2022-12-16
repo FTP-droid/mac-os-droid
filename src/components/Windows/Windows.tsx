@@ -20,7 +20,7 @@ function Windows() {
   const onDrop = (e: DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     setStyleLeft(`${e.clientX - offsetX}px`);
-    setStyleTop(`${e.clientY - offsetY}px - 1.25rem`);
+    setStyleTop(`${e.clientY - offsetY}px`);
   };
 
   return (
