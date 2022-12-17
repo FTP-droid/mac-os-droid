@@ -40,6 +40,10 @@
   border-radius: 9999px;
 }
 
+.button-child {
+  margin-bottom: 0.1rem;
+}
+
 #close {
   background-color: rgb(245, 72, 72);
   color: rgb(245, 72, 72);
