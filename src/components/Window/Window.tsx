@@ -16,7 +16,6 @@ function Window({
 
   const onDragStart = (e: DragEvent<HTMLDivElement>) => {
     const rect = dummyRef?.current?.getBoundingClientRect();
-
     setOffsetX(e.clientX - (rect ? rect.x : 0));
     setOffsetY(e.clientY - (rect ? rect.y : 0));
   };
