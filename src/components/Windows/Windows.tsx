@@ -1,5 +1,4 @@
 import Window from 'components/Window/Window';
-import { DragEvent, useState } from 'react';
 import styles from './windows.module.css';
 
 function Windows() {

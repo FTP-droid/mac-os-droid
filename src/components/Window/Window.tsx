@@ -1,7 +1,4 @@
-import { DragEvent, useRef } from 'react';
 import styles from './window.module.css';
-
-//test comment
 
 function Window() {
   return (
