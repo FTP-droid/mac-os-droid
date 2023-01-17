@@ -10,6 +10,8 @@ This is a clone of macOs, specifically a clone of the design of macOs, built fro
 
 ## Steps to run the project in development mode
 
-- npm install
-- npm run build
-- npm start
+```
+npm install
+npm run build
+npm start
+```
