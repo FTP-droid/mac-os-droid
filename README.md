@@ -15,3 +15,6 @@ npm install
 npm run build
 npm start
 ```
+
+## Current View of Project
+![Screenshot of project](assets/view/Screenshot_2023-01-17_12-30-50.png)
