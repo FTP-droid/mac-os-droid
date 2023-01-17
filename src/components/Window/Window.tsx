@@ -4,9 +4,7 @@ import styles from './window.module.css';
 function Window() {
 
   return (
-    <div
-      className={styles.container}
-    >
+    <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles['button-container']}>
           <button type="button" className={styles.button} id={styles.close}>
