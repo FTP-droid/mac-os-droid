@@ -72,7 +72,7 @@ function MenuBar() {
         ))}
         <MenuBarText
           text={`${dayList[day]} ${hours % 12}:${minutes} ${
-            hours > 12 ? 'PM' : 'AM'
+            hours >= 12 ? 'PM' : 'AM'
           }`}
           dropDownValues={all[all.length - 1]}
         />
