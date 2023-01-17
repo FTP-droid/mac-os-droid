@@ -1,4 +1,4 @@
-This is a clone of macOs, specifically a clone of the design of macOs, built from the electron-react boilerplate repo.
+This is a clone of macOS, specifically a clone of the design of macOS, built from the electron-react boilerplate repo.
 
 ## Icon Attributions
 
