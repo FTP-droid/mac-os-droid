@@ -2,7 +2,6 @@ import { DragEvent, useRef } from 'react';
 import styles from './window.module.css';
 
 function Window() {
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>

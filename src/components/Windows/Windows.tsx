@@ -4,8 +4,7 @@ import styles from './windows.module.css';
 
 function Windows() {
   return (
-    <div
-      className={styles.container}>
+    <div className={styles.container}>
       <Window />
     </div>
   );
