@@ -7,11 +7,11 @@ function LogIn() {
       <div className={styles['right-menu']}>Right Icons</div>
       <div className={styles['log-in-center']}>
         <img src={avatar} alt="" className={styles['avatar-img']} />
-        <div className={styles['name']}>John Appleseed</div>
+        <div className={styles.name}>Mary Appleseed</div>
         <input
-          type="text"
+          type="password"
           placeholder="Enter Password"
-          className={styles['password']}
+          className={styles.password}
         />
       </div>
       <div>BUttons</div>
