@@ -18,3 +18,31 @@
 .right-menu {
     align-self: flex-end;
 }
+
+.log-in-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar-img {
+    border-radius: 999px;
+    height: 9rem;
+    width: 9rem;
+}
+
+.name {
+    color: white;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.password {
+    border-radius: 999px;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}

@@ -1,10 +1,19 @@
 import styles from './logIn.module.css';
+import avatar from '../../../assets/avatar.jpg';
 
 function LogIn() {
   return (
     <div className={styles.container}>
       <div className={styles['right-menu']}>Right Icons</div>
-      <div>Log in center</div>
+      <div className={styles['log-in-center']}>
+        <img src={avatar} alt="" className={styles['avatar-img']} />
+        <div className={styles['name']}>John Appleseed</div>
+        <input
+          type="text"
+          placeholder="Enter Password"
+          className={styles['password']}
+        />
+      </div>
       <div>BUttons</div>
     </div>
   );
